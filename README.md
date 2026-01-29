@@ -10,9 +10,7 @@ The input matrix is given in the form of a comma-separated values (csv) file, su
 
 2. Make sure you have a development environment that provides a port of the GNU compiler collection (gcc), like MinGW, Cygwin, clang, MSVC, among others.
 
-3. Compile the source files:<br>
-
-`gcc -o createBDM.exe prints.c main.c`<br>
+3. Compile the source files:<br> `gcc -o createBDM.exe prints.c main.c`<br>
 
 _Note_: replace `createBDM.exe` with whatever name and extension you wish for the executable file.
 
@@ -20,6 +18,7 @@ _Note_: replace `createBDM.exe` with whatever name and extension you wish for th
 
 1. If running on Windows, just type the name of the file (without extension) and then enter or double-click on the icon under Windows explorer. If running on Linux or Mac, just type `./` before the name of the executable file.
 
+2. This is the main menu of the program:
 ```
 ====================================
 MAIN MENU
@@ -33,54 +32,51 @@ MAIN MENU
 Select option: 1
 ====================================
 ```
+3. First of all, you need to load one or more datasets, i.e. csv files. Select option 1 and then press enter. The following menu will appear:
+```
+Load dataset file(s)
+------------------------------------
+[1] File
+[2] Directory
+[3] Return
+Select source: _
+```
+4. You can either load a single file or all the csv files inside a given subfolder (inside the directory where the program is running).
+```
+Select source: 1
+Enter file name: medium/mushroom.csv
+File 'medium/mushroom.csv' loaded successfully
+```
+```
+Select source: 2
+Enter directory name: large
+File 'large/adult.csv' loaded successfully
+File 'large/bank-marketing.csv' loaded successfully
+File 'large/product-classification-and-clustering.csv' loaded successfully
+File 'large/secondary-mushroom.csv' loaded successfully
+```
+_Note:_ Everytime you load a file or a directory, the previously loaded dataset(s) will be replaced by the recently loaded one(s).
 
-\## Authors
+5. Once you have loaded a dataset, you can proceed to run any of the 4 available algorithms:
+```
+====================================
+MAIN MENU
+------------------------------------
+[1] Load dataset file(s)
+[2] Incremental algorithm for reducts
+[3] Original algorithm for reducts
+[4] Incremental algorithm for constructs
+[5] Original algorithm for constructs
+[6] Exit
+Select option: 2
+====================================
+Incremental algorithm for Reducts
+Processing assesing-mathematics-learning-in-higher-education - ended
+Processing mushroom - ended
+Processing room-occupancy-estimation - ended
+Processing taiwanese-bankruptcy-prediction - ended
+------------------------------------
+```
+6. After the executions have ended, you will see that folder *bol* now contains a _mb_ file for each _csv_ file that was processed by the algorithm. The *mb* file is the corresponding __Binary Discernibility Matrix__. Make sure this folder exists before running any algorithm.
 
-Contributors names and contact info
-
-ex. Dominique Pizzie
-
-ex. \[@DomPizzie](https://twitter.com/dompizzie)
-
-
-
-\## Version History
-
-
-
-\* 0.2
-
-    \* Various bug fixes and optimizations
-
-    \* See \[commit change]() or See \[release history]()
-
-\* 0.1
-
-    \* Initial Release
-
-
-
-\## License
-
-
-
-This project is licensed under the \[NAME HERE] License - see the LICENSE.md file for details
-
-
-
-\## Acknowledgments
-
-
-
-Inspiration, code snippets, etc.
-
-\* \[awesome-readme](https://github.com/matiassingers/awesome-readme)
-
-\* \[PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-
-\* \[dbader](https://github.com/dbader/readme-template)
-
-\* \[zenorocha](https://gist.github.com/zenorocha/4526327)
-
-\* \[fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
-
+7. In addition, you will see that a file called __log.csv__ was created (if it didn't previously exist). This file contains the logs of execution, which include the time in seconds that took the algorithm to process each dataset.
