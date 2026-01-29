@@ -1,0 +1,12 @@
+Algoritmo Incremental
+dataset,filas-ma,cols-ma,filas-mb,cols-mb,segundos
+labor-neg,40,17,67,16,0.00
+heart-statlog,270,14,68,13,0.02
+lung-cancer,32,57,327,56,0.00
+breast-w,699,11,20,10,0.05
+dermatology,366,35,1124,34,0.67
+connect-4,67557,43,697,42,7063.30
+promoters,106,59,2761,58,0.20
+credit_a,690,16,23,15,0.09
+anneal,898,39,62,38,0.36
+autos,205,26,29,25,0.02

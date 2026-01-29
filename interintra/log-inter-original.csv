@@ -1,0 +1,11 @@
+Algoritmo Original para Reductos
+dataset,filas-ma,cols-ma,filas-mb,cols-mb,segundos
+labor-neg,40,17,67,16,0.00
+heart-statlog,270,14,68,13,0.04
+lung-cancer,32,57,327,56,0.00
+breast-w,699,11,20,10,0.10
+dermatology,366,35,1124,34,1.75
+promoters,106,59,2761,58,0.25
+credit_a,690,16,23,15,0.31
+anneal,898,39,62,38,1.21
+autos,205,26,29,25,0.02
